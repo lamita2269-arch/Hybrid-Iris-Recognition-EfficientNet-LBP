@@ -17,17 +17,21 @@ This application uses a **Hybrid Deep Learning & Texture Analysis** approach to 
 """)
 
 # 2. Load Pre-trained Models
+import gdown # مكتبة لتحميل الملفات من جوجل درايف
+
 @st.cache_resource
 def load_models():
-    # Load CNN for feature extraction
-    cnn_model = tf.keras.models.load_model('iris_93_plus.keras')
-    # Remove the classification head to get features
-    feature_extractor = tf.keras.Model(inputs=cnn_model.input, outputs=cnn_model.layers[-2].output)
+    # رابط الموديل من جوجل درايف (استخدم الجزء الخاص بالـ ID من الرابط)
+    file_id = '1v63dK3gKC6hL21j4-S7EEUG1mfeujHF4' 
+    url = f'https://drive.google.com/uc?id={file_id}'
+    output = 'iris_93_plus.keras'
     
-    # Load the SVM classifier and Scaler (Assuming you saved them as .pkl)
-    # svm_model = joblib.load('final_svm_model.pkl')
-    # scaler = joblib.load('feature_scaler.pkl')
-    return feature_extractor #, svm_model, scaler
+    # تحميل الملف إذا لم يكن موجوداً
+    if not os.path.exists(output):
+        gdown.download(url, output, quiet=False)
+    
+    cnn_model = tf.keras.models.load_model(output)
+    return cnn_model
 
 extractor = load_models()
 
