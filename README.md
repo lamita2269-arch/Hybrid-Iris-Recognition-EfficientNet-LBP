@@ -22,3 +22,4 @@ The proposed model follows a multi-stage pipeline:
 3. Texture Feature Extraction (LBP).
 4. Feature Fusion & Standardization.
 5. Classification via RBF-Kernel SVM.
+   - `iris_93_plus.keras`: [Download Pre-trained Model Weights]https://drive.google.com/file/d/1v63dK3gKC6hL21j4-S7EEUGlmfeujHF4/view?usp=drive_linkا)
