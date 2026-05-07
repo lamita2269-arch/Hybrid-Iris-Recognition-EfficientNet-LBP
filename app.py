@@ -15,7 +15,8 @@ st.title("👁️ Hybrid Iris Recognition System")
 @st.cache_resource
 def load_model_from_drive():
     # هذا هو المعرف الخاص بملفك الذي استخرجته من الرابط
-    file_id = '1v63dK3gKC6hL21j4-S7EEUG1mfeujHF4'
+    # المعرف المستخرج من رابطك
+    file_id = '1v63dK3gKC6hL21j4-S7EEUGlmfeujHF4'
     url = f'https://drive.google.com/uc?id={file_id}'
     output = 'iris_93_plus.keras'
     
