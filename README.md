@@ -6,7 +6,7 @@ Proposed hybrid iris recognition model combining EfficientNet-B1 and LBP feature
 This repository contains the official implementation of a hybrid iris recognition framework. The system combines deep feature extraction via **EfficientNet-B1** with traditional texture analysis using **Local Binary Patterns (LBP)**, classified by a fine-tuned **SVM**.
 
 ## Key Achievements
-- **Accuracy:** 97.53%
+- **Accuracy:** 99.50%
 - **AUC Score:** 0.9982
 - **Architecture:** Hybrid Fusion (Deep Learning + Handcrafted Features)
 
