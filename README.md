@@ -7,7 +7,7 @@ This repository contains the official implementation of a hybrid iris recognitio
 
 ## Key Achievements
 - **Accuracy:** 99.50%
-- **AUC Score:** 0.9982
+- **AUC Score:** 0.9990
 - **Architecture:** Hybrid Fusion (Deep Learning + Handcrafted Features)
 
 ## Repository Structure
